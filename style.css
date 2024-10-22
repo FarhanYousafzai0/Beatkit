@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+
+}
+body{
+    background-color: #0E0837;
+    color: white;
+}
+:root{
+    --primary-color:#D71462;
+}
+/* Navigation-bar */
+.main{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+ 
+}
+.back-vedio{
+    position: absolute;
+  top: 0;
+    right: 0;
+
+    bottom: -30%;
+    z-index: -1;
+}
+.nav{
+    /* background-color: red; */
+    padding: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #0E0837;
+}
+
+.items ul,.icons{
+    display: flex;
+    gap: 1.5rem;
+}
+.items ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.items ul i{
+font-size: 1.5rem;
+display: none;
+}
+
+.icons i {
+    font-size: 1.4rem;
+    transition: all 0.3s ;
+}
+.icons i:hover{
+color:var(--primary-color) ;
+transform: translateY(-10px);
+}
+/* Hero section. */
+.hero{
+    display: flex;
+width: 80%;
+margin: 4rem auto;
+align-items: center;
+}
+.hero-left,.hero-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-left p {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.hero-left span{
+    font-size: 1.2rem;
+   
+}
+.hero-left h1{
+    font-size: 3rem;
+    font-weight: 1400;
+}
+.h-icons{
+    display: flex;
+    gap: 1rem;
+}
+.h-icons{
+    font-size: 1.5rem;
+ 
+
+}
+.h-icons i:hover{
+    color:var(--primary-color) ;
+transform: translateY(-10px);
+transition: 0.3s all;
+}
+.hero-btn button{
+    padding: 1rem 1.5rem;
+    background-color: #0567F3;
+    border: none;
+    color: white;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+.hero-btn button:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+/* Events and Tours section */
+
+.Events{
+    height: 59vh;
+    position: relative;
+   position: relative;
+    width: 80%;
+    margin:  auto;
+    background-color: #100726;
+    top: 25%;
+    padding: 1rem;
+}
+.Events p{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* Below this is a Media Quries Section */
+
+
+@media (min-aspect-ratio: 16/9) {
+    .back-vedio{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-vedio{
+        width: auto;
+        height: 100%;
+    }
+}
+@media (max-width: 1980px) {
+    .Events{
+       top: 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    .nav{
+        padding: 2rem;
+    }
+}
+@media (max-width:1000px) {
+    .items ul li{
+        display: none;
+    }
+    .items ul i{
+        display: block;
+    }
+}
+
+
+@media (max-width: 900px) {
+    
+}
+
+@media (max-width:800px) {
+    
+}
+
+@media (max-width: 768px) {
+    .icons{
+        display: none;
+    }
+    .nav{
+        justify-content: space-between;
+    }
+    .hero{
+        flex-direction: column;
+        height: 100%;
+        
+    }
+    .hero-left,.hero-right{
+        width: auto;
+      height: 100%;
+     
+    }
+    .hero-right{
+        width: 100%;
+    }
+    .back-vedio{
+    
+    }
+   .hero-right img{
+    vertical-align: middle;
+    height: 50%;
+    width: 50%;
+   }
+  
+    .hero-content h1{
+        font-size: 2rem;
+    }
+    .hero-content p{
+        font-size: 1rem;
+    }
+    .hero-btn button{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
