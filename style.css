@@ -4,7 +4,28 @@
     box-sizing: border-box;
     font-family: "Orbitron", sans-serif;
 }
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
 
+/* The background of the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* The scrollbar thumb (the handle that moves) */
+::-webkit-scrollbar-thumb {
+    background-color: #0e1a5b;
+    background-image: linear-gradient(135deg, #0e1a5b 0%, #320c42 100%);
+  
+    border-radius: 6px;
+}
+
+/* Change scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff6a3d1e, #ff9966);
+}
 body,html{
     width: 100%;
     height: 100%;
@@ -29,7 +50,7 @@ body{
   top: 0;
     right: 0;
 
-    bottom: -30%;
+    /* bottom: -30%; */
     z-index: -1;
 }
 .nav{
@@ -38,8 +59,7 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-around;
-    border: 1px solid #0E0837;
-}
+    border-bottom: 1px solid #23236A;}
 
 .items ul,.icons{
     display: flex;
@@ -120,27 +140,562 @@ transition: 0.3s all;
 /* Events and Tours section */
 
 .Events{
-    height: 59vh;
-    position: relative;
-   position: relative;
+  display: flex;
     width: 80%;
-    margin:  auto;
+    margin:9.2rem auto;
     background-color: #100726;
-    top: 25%;
+    /* top: 65%; */
+   /* height: 70%; */
+
     padding: 1rem;
 }
+.no-border{
+    border-right:none;
+}
+.Ev-1{
+    display: flex;
+    flex-direction: column;
+text-align: start;
+    border-right: 1px solid #23236A;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.Ev-1 h2{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+.Ev-1 a{
+   color: white;
+    font-size: 0.9rem;
+
+    text-decoration: none;
+}
+.Ev-1 a:hover{
+    color: var(--primary-color);
+    transition: 0.3s all;
+}
+.Ev-1 span{
+    
+ font-size: 0.8rem;
+}
+
 .Events p{
     color: var(--primary-color);
     font-size: 1.4rem;
     font-weight: bold;
 }
 
+.Ev-card{
+width: 300px;
+    background-color: var(--primary-color);
+    text-align: center;
+    
+ position: absolute;
+ right: 5%;
+ top: 100%;
+
+}
+
+.Ev-card img{
+    
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+   width: 100%;
+}
+/* Journey-section */
+.journey{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+    position: relative;
+}
+.journey h2{
+    font-size: 4rem;
+    font-weight: bolder;
+}
+.journey p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.j-btn {
+   
+    color: #fff;
+    width: 60px;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60px;
+    border-radius: 100%;
+    background: white;
+
+    box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
+    animation: 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
+   
+    border: 0;
+  }
+
+  .j-btn svg {
+      color: #0567F3;
+      width: 15px;
+      transition: all 0.3s ;
+  }
+.j-btn svg:hover {
+    color: var(--primary-color);
+}
+  
+  @keyframes pulse {
+    100% {
+      box-shadow: 0 0 0 45px rgba(193,244,246,0);
+    }
+  }
+  
+
+  /* About-us section */
+  .About-us{
+   display: flex;
+
+   padding: 2rem;
+   gap: 1rem;
+   width: 80%;
+   margin: auto;
+  }
+  .about-left,.about-right{
+      width: 50%;
+  }
+  .about-left p{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+  }
+  .about-left h2{
+    font-size: 3rem;
+      
+  }
+  .about-right p{
+    line-height: 2rem;font-size: 0.8rem;
+  }
+  
+  /* Release */
+  .Release{
+background-image: url(https://demo.moxcreative.com/beatkit/wp-content/uploads/sites/21/2021/04/dj-sound-equipment-at-nightclubs-and-music-festivals-edm-future-house-music-and-so-on.jpg);
+/* height: 100%;     */
+background-position: center;
+background-repeat: no-repeat;
+object-fit:cover;
+height: 150vh;
+opacity: 70%;
+width:100%;
+
+  }
+.rel-sec{
+   
+    display: flex;
+    margin: auto;
+    width: 80%;
+    padding: 2rem;
+    gap: 2rem;
+}
+.rel-left p{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.rel-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    backdrop-filter: opacity(100%);
+}
+.rel-left,.rel-right{
+    width: 50%;
+}
+.music-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+}
+.M-0{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    padding: 0.5rem;
+ 
+    background-color: #3b0a3a;
+    background-image: linear-gradient(-160deg, #3b0a3a 0%, #0e0725 100%);
+}
+.M-0:hover{
+    opacity: 100%;
+}
+.no-background{
+    background-color: transparent;
+    background-image: none;
+}
+
+.rel-card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: #0e1a5b;
+    background-image: linear-gradient(135deg, #0e1a5b 0%, #320c42 100%);
+    
+    
+}
+.M-0:hover{
+    opacity: 100%;
+    background-image: linear-gradient(180deg, #0e1a5b 0%, #320c42 100%);
+}
+.rel-card p{
+    color: var(--primary-color);
+    font-size: 1rem;
+   
+}
+.rel-card h2{
+    font-size: 2rem;
+}
+.rel-right span{
+    line-height: 2rem;
+}
+.ICON-TEXT{
+    display:flex;
+    gap:1rem;
+
+
+}
+#text{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+
+}
+#icon{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#text h2{
+    font-size: 1rem;
+}
+#text p{
+    font-size: 0.8rem;
+}
 
 
 
+/* Conerts */
+.Concert{
+    text-align: center;
+    padding: 2rem;
+    width: 80%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Concert h2{
+   font-size: 3rem;
+}
+.Concert p{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    
+}
+.concert-cards{
+    display:flex;
+    flex-direction:column;
+    gap:1rerm;
+
+    
+}
+.C-card{
+padding: 1.5rem;
+background-color: #0e1a5b;
+background-image: linear-gradient(135deg, #0e1a5b 0%, #320c42 100%);
+
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap: 1rem;
+
+}
+.C-card:hover{
+    opacity: 100%;
+    background-image: linear-gradient(180deg, #102491 0%, #701996 100%);
+}
+.C-icon{
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    border-radius: 0.3rem;
+}
+.C-icon i{
+    font-size: 2rem;
+}
+.C-name h2{
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.C-card button{
+    padding: 1rem 1.5rem;
+    background-color: #0567F3;
+    color: #fff;
+    border: none;
+    transition: 0.3s all;
+    font-family: sans-serif;
+}
+.C-card button:hover{
+    background-color: var(--primary-color);
+}
+.border-w button{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    color: b;
+}
+.border-w button:hover{
+    background-color: transparent;
+}
+.left-0,.right-0{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.concert-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.image-grid {
+    display: flex;
+    width: 100%;
+  
+   
+    gap: 0;
+    overflow: hidden;
+}
+
+.image-item {
+    overflow: hidden;
+   transition: 0.3s all ease-in-out;
+width: 100%;
+}
+
+.image-item img {
+  width: 400px;
+  transition:  0.3s;
+    height: 400px;
+   
+}
+
+
+.image-item:hover {
+    transform: scaleX(1.4); /* Widen the image */
+    overflow: hidden;
+    
+}
+/* Upadtes_and_News */
+
+.Updates{
+    width: 70%;
+    margin:4rem auto;
+}
+.Updates p{
+    font-size: 2rem;
+    color: var(--primary-color);
+
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+  padding: 2rem 0rem;
+    align-items: center;
+   
+    border-bottom: 1px solid var(--primary-color);
+}
+.top-L{
+    text-align: center;
+}
+.top-L h2{
+    font-size: 3rem;
+   
+}
+.News-cards{
+    display:flex;
+    gap:1rem;
+   padding: 2rem 0rem;
+    
+}
+.News-1{
+    margin-top: 1rem;
+    width: 400px;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #100726;
+}
+.News-1 h2 , .News-1 p{
+    padding: 0rem 1rem;
+}
+.News-1 h2{
+    font-size: 1rem;
+}
+.News-1 h2:hover{
+    color: var(--primary-color);
+}
+.News-1 p{
+    font-size: 0.3rem;
+   color:var(--primary-color)
+}
+.News-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-news{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-news a{
+    padding: 0.5rem 1rem;
+    background-color: #0567F3;
+    color: white;
+    border:none;
+    transition: all 0.3s;
+    text-decoration: none;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+.btn-news a:hover{
+    background-color:var(--primary-color);
+    color: white;
+    border:none;
+    text-decoration: none;
+}
+.new-img{
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+}
+
+
+.Release{
+    width: 100%;
+    height: auto;
+    padding: 0;
+
+}
+
+/* Sponsers-Ships */
+.sponser{
+    text-align: center;
+    width: 80%;
+    margin:auto;
+    padding: 2rem;
+}
+.sponser P{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+.sponser h2{
+    font-size: 4rem;
+
+}
+.sponsers-img{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    gap:1rem;
+}
+.sponsers-img img{
+    width: 70%;
+   
+    object-fit: cover;
+}
 
 
 
+/* Footer section */
+footer{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  opacity: 70%;
+
+  background-image: url(https://demo.moxcreative.com/beatkit/wp-content/uploads/sites/21/2021/04/neon-bg-e1618242121980.png); /* Replace with your image */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-attachment: fixed; /* Makes the background stay fixed during scrolling */
+  
+  /* height: 100vh; */
+}
+.footer-section{
+    display: flex;
+    width: 80%;
+    margin:auto;
+    justify-content: space-around;
+}
+.sec-1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+ 
+    width: 30%;
+    position: relative;
+
+}
+.sec-2{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30%;
+    padding: 2rem;
+}
+.sec-2 p{
+    font-size: 0.7rem;
+    line-height: 3rem;
+}
+.sec-1 a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
+.sec-line{
+    width: 60%;
+    height: 1px;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+ 
+   
+}
+
+.footer-line{
+    padding: 2rem;
+text-align: center;
+border-top: 1px solid #3b0a3a;
+}
 /* Below this is a Media Quries Section */
 
 
@@ -156,17 +711,53 @@ transition: 0.3s all;
         width: auto;
         height: 100%;
     }
+   
 }
-@media (max-width: 1980px) {
-    .Events{
-       top: 0;
-    }
-}
+
 
 @media (max-width: 1280px) {
     .nav{
         padding: 2rem;
     }
+    .Events{
+      
+        margin: auto;
+        width: auto;
+      
+      
+
+    }
+    .Concert{
+        width: 100%;
+        padding: 0;
+    }
+    .C-left, .C-right{
+        flex-direction: column
+    }
+    ;
+    .Ev-card img{
+        width: 100%;
+   
+    }
+    .Ev-card{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .Ev-1{
+        margin-top: 2rem;
+    }
+    .journey{
+          
+        margin: auto;
+        width: auto;
+      
+      padding: 0;
+    }
+    .Updates{
+        width: 95%;
+    }
+   
 }
 @media (max-width:1000px) {
     .items ul li{
@@ -175,15 +766,45 @@ transition: 0.3s all;
     .items ul i{
         display: block;
     }
+    .About-us{
+        width: 100%;
+        flex-direction: column;
+    }
+    .about-left,.about-right{
+        width: 100%;
+        height: 100%;
+    }
 }
+
+
+
 
 
 @media (max-width: 900px) {
-    
+    .C-btn button{
+        padding: 0.5rem 1.5rem;
+        
+    }
+    .footer-section{
+        width: 90%;
+      
+    }
 }
 
 @media (max-width:800px) {
-    
+    .image-grid{
+        flex-direction: column;
+        width: 100%;
+    }
+    .image-item img{
+    height: 300px;
+        width: 100%;
+    }
+    .image-item:hover {
+        transform: scaleY(1.4); /* Widen the image */
+        
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 768px) {
@@ -210,9 +831,7 @@ transition: 0.3s all;
     
     }
    .hero-right img{
-    vertical-align: middle;
-    height: 50%;
-    width: 50%;
+   display: none;
    }
   
     .hero-content h1{
@@ -224,5 +843,145 @@ transition: 0.3s all;
     .hero-btn button{
         padding: 0.5rem 1rem;
         font-size: 1rem;
+    }
+    .Events{
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+
+     }
+     .Ev-card{
+        position: relative;
+        width: 100%;
+      
+       margin: 0;
+    
+
+     }
+   
+     .Ev-1{
+        border-right: none;
+     }
+     .journey p{
+        font-size: 1rem;
+     }
+     .journey h2{
+font-size: 2.5rem;
+     }
+     .j-btn{
+        top: 50%;
+        transform: translate(-50%, 50%);
+        left: 50%;
+        width: 35px;
+        height: 35px;
+        /* transform: translate(-50%, -50%); */
+    }
+    .j-btn svg{
+        width: 10px;
+    }
+    .About-us{
+        text-align: center;
+
+      
+        
+    }
+    .about-right,.about-left{
+        text-align: start;
+    }
+    .rel-sec{
+        flex-direction: column;
+        width: 100%;
+    }
+    .rel-left,.rel-right{
+        width: 100%;
+        padding: 0;
+    }
+    .rel-img img{
+        width:100%;
+    }
+    .C-card{
+        flex-direction: column;
+        padding: 0;
+        align-items: start;
+      
+    }
+    
+    .Concert{
+        padding: 0;
+
+
+
+   }
+    .Concert h2{
+        font-size: 2rem;
+    }
+    .left-0,.right-0{
+        text-align: start;
+    }
+.C-btn {
+    margin:1rem 40%;
+
+}
+.C-btn button{
+   
+    
+}
+.btn-news a{
+    padding: 0.2rem 0.5rem;
+    font-size: 0.6rem;
+}
+.btn-news a i{
+    font-size: 0.5rem;
+}
+.News-cards{
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+}
+
+.Updates {
+    text-align: center;
+    padding: 0rem;
+}
+.top{
+    flex-direction: column;
+}
+.top-L h2{
+    font-size: 2rem;
+   margin-bottom: 1rem;
+}
+.News-1{
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+.sponser{ width: 100%;
+}
+.sponser p{
+font-size: 1.2rem;
+}
+.sponser h2{
+font-size: 2rem;
+}
+footer{
+    flex-direction: column;
+    margin: 0rem;
+    gap:0;
+}
+.sec-2{
+  justify-content: center;
+  width: 80%;
+  text-align: center;
+}
+.sec-1{
+    width: 100%;
+}
+}
+.footer-section{
+    padding: 0rem;
+}
+@media (max-width:500px) {
+    .C-btn button{
+        padding: 0.5rem 1.5rem;
     }
 }
