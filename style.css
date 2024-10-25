@@ -200,7 +200,7 @@ width: 300px;
 }
 .icons-footer{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 .icons-footer i:hover{
     color:var(--primary-color) ;
